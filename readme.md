@@ -1,4 +1,4 @@
-alternate implementation of hoodie.account:
+alternate implementation of hoodie.account. goal is to be transport agnostic (via streams) and work in node + the browser
 
     // sign up
     hoodie.account.signUp('joe@example.com', 'secret');
@@ -39,3 +39,5 @@ alternate implementation of hoodie.account:
   
     // user's session has timed out. This means the user is still signed in locally, but Hoodie cannot sync remotely, so the user must sign in again
     hoodie.account.on('unauthenticated', function (user) {});
+
+todo write a demo using https://github.com/Raynos/engine.io-stream as the transport
